@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+            fx:controller="mygame.TicTacToeController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu text="Play">
+                    <items>
+                        <MenuItem onAction="#play" text="1v1"/>
+                        <Menu mnemonicParsing="false" text="Computer">
+                            <items>
+                                <MenuItem onAction="#playComputer" text="Unbeatable"/>
+                                <MenuItem onAction="#playComputer" text="Hard"/>
+                                <MenuItem onAction="#playComputer" text="Medium"/>
+                                <MenuItem onAction="#playComputer" text="Easy"/>
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane fx:id="gameBoard" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="b1" disable="true" onAction="#squareClickedHandler" prefHeight="100.0"
+                        prefWidth="100.0"/>
+                <Button fx:id="b2" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.columnIndex="1"/>
+                <Button fx:id="b3" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.columnIndex="2"/>
+                <Button fx:id="b4" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.rowIndex="1"/>
+                <Button fx:id="b5" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Button fx:id="b6" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Button fx:id="b7" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.rowIndex="2"/>
+                <Button fx:id="b8" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Button fx:id="b9" disable="true" onAction="#squareClickedHandler" prefHeight="100.0" prefWidth="100.0"
+                        GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </center>
+</BorderPane>
